@@ -56,7 +56,7 @@ async def auto_approve(client: Bot, message: ChatJoinRequest):
         
         await client.send_photo(
             chat_id=user.id,
-            photo='https://ibb.co/mVkSySr7',
+            photo='https://ibb.co/DHqBS4V7',
             caption=caption_approve_ka,
             reply_markup=markup
         )
