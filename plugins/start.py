@@ -60,7 +60,7 @@ def check_fsub(func):
                 return False
 
         async def is_subscribed(client, user_id):
-            channel_ids = await Seishiro.show_channels()
+            channel_ids = await Seishiro.get_fsub_channels()
             if not channel_ids:
                 return True
             if user_id == OWNER_ID:
@@ -106,7 +106,7 @@ async def not_joined(client: Client, message: Message):
     count = 0
 
     try:
-        all_channels = await Seishiro.show_channels()
+        all_channels = await Seishiro.get_fsub_channels()
         for chat_id in all_channels:
             await message.reply_chat_action(ChatAction.TYPING)
 
